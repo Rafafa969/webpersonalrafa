@@ -1,0 +1,184 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variabel Warna */
+:root {
+    --primary-color: #4A90E2; /* Warna utama */
+    --secondary-color: #FFFFFF; /* Warna sekunder */
+    --accent-color: #D0021B; /* Warna aksen */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Warna bayangan */
+    --base-font-size: 16px; /* Ukuran font dasar */
+    --base-spacing: 1rem; /* Spasi dasar */
+}
+
+body {
+    padding: 0px; /* Padding untuk body */
+    margin: 0%; /* Menghilangkan margin default */
+    background-color: var(--secondary-color); /* Warna latar belakang */
+    font-family: 'Arial', sans-serif; /* Font global */
+    font-size: var(--base-font-size); /* Ukuran font dasar */
+}
+
+/* Header */
+header {
+    display: flex; /* Menggunakan flexbox untuk layout */
+    justify-content: space-between; /* Ruang antara logo dan menu */
+    align-items: center; /* Menyelaraskan item secara vertikal */
+    padding: var(--base-spacing); /* Padding untuk header */
+    background: var(--primary-color); /* Warna latar belakang header */
+    color: var(--secondary-color); /* Warna teks di header */
+    margin-bottom: var(--base-spacing); /* Margin bawah untuk header */
+}
+
+header .logo {
+    font-size: 2rem; /* Ukuran font logo */
+}
+
+header nav ul {
+    display: flex; /* Flexbox untuk menu */
+    list-style: none; /* Menghilangkan bullet points */
+}
+
+header nav ul li {
+    margin: 0 var(--base-spacing); /* Margin antara item menu */
+}
+
+header nav ul li a {
+    color: var(--secondary-color); /* Warna tautan */
+    text-decoration: none; /* Menghilangkan garis bawah */
+    transition: all 0.3s ease; /* Transisi untuk efek hover */
+}
+
+header nav ul li a:hover {
+    color: var(--accent-color); /* Warna tautan saat hover */
+    transform: scale(1.05); /* Sedikit membesar saat hover */
+}
+
+/* Section Sertifikat */
+#sertifikat {
+    padding: 5rem; /* Padding untuk section sertifikat */
+    background: var(--secondary-color); /* Warna latar belakang section */
+    box-shadow: 0 2px 5px var(--shadow-color); /* Bayangan untuk section */
+    border-radius: 8px; /* Sudut membulat untuk section */
+}
+
+h2 {
+    text-align: center; /* Menyelaraskan judul di tengah */
+    margin-bottom: 5rem; /* Margin bawah untuk judul */
+    color: var(--primary-color); /* Warna judul */
+}
+
+/* Footer */
+footer {
+    padding: var(--base-spacing); /* Padding untuk footer */
+    background: var(--primary-color); /* Warna latar belakang footer */
+    color: var(--secondary-color); /* Warna teks footer */
+    text-align: center; /* Menyelaraskan teks di tengah */
+    margin-top: var(--base-spacing); /* Margin atas untuk footer */
+    margin-top: 10%;
+}
+
+.social-media {
+    margin-top: var(--base-spacing); /* Margin atas untuk sosial media */
+}
+
+.social-media a {
+    color: var(--secondary-color); /* Warna teks link sosial media */
+    margin: 0 10px; /* Margin antar link sosial media */
+    text-decoration: none; /* Menghilangkan garis bawah */
+}
+
+.social-media a:hover {
+    color: var(--accent-color); /* Warna tautan saat hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .sertifikat-container {
+        flex-direction: column; /* Menumpuk item secara vertikal pada layar kecil */
+        align-items: center; /* Menyelaraskan item di tengah */
+    }
+
+    .sertifikat-image {
+        width: 100%; /* Lebar penuh pada layar kecil */
+        max-width: none; /* Menghapus batasan lebar maksimum */
+    }
+}
+/* Section Sertifikat */
+#sertifikat {
+    padding: 6rem; /* Menambah padding untuk section sertifikat */
+    background: var(--secondary-color); /* Warna latar belakang section */
+    box-shadow: 0 2px 5px var(--shadow-color); /* Bayangan untuk section */
+    border-radius: 8px; /* Sudut membulat untuk section */
+    margin: 2rem; /* Menambah margin untuk section sertifikat */
+}
+
+h2 {
+    text-align: center; /* Menyelaraskan judul di tengah */
+    margin-bottom: 4rem; /* Mengurangi margin bawah untuk judul */
+    color: var(--primary-color); /* Warna judul */
+    font-size: 1.5rem; /* Ukuran font judul */
+}
+
+/* Sertifikat Container */
+.sertifikat-container {
+    display: flex; /* Menggunakan flexbox untuk item sertifikat */
+    flex-wrap: wrap; /* Membungkus item jika tidak muat */
+    justify-content: space-around; /* Ruang antar item */
+    padding: 2rem; /* Padding untuk container */
+}
+
+/* Sertifikat Item */
+.sertifikat-item {
+    position: relative; /* Untuk posisi overlay */
+    margin: 2rem; /* Margin antar item sertifikat */
+    text-align: center; /* Menyelaraskan teks di tengah */
+    transition: transform 0.3s ease; /* Transisi untuk efek hover */
+    padding: 1rem; /* Menambah padding di dalam item sertifikat */
+    border: 1px solid var(--shadow-color); /* Menambah border untuk item sertifikat */
+    border-radius: 8px; /* Sudut membulat untuk item sertifikat */
+}
+
+.sertifikat-item:hover {
+    transform: scale(1.05); /* Memperbesar gambar saat hover */
+}
+
+/* Sertifikat Image */
+.sertifikat-image {
+    width: 100%; /* Lebar 100% dari kontainer */
+    max-width: 400px; /* Ubah lebar maksimum gambar sertifikat */
+    height: auto; /* Menjaga rasio aspek gambar */
+    border-radius: 8px; /* Sudut membulat untuk gambar */
+    box-shadow: 0 2px 5px var(--shadow-color); /* Tambahkan bayangan untuk efek visual */
+}
+
+/* Overlay Effect */
+.overlay {
+    position: absolute; /* Posisi overlay */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna overlay dengan transparansi */
+    opacity: 0; /* Awalnya tidak terlihat */
+    transition: opacity 0.3s ease; /* Transisi untuk efek overlay */
+    border-radius: 8px; /* Sudut membulat untuk overlay */
+}
+
+.sertifikat-item:hover .overlay {
+    opacity: 1; /* Menampilkan overlay saat hover */
+}
+
+/* Teks Overlay */
+.text-overlay {
+    color: white; /* Warna teks overlay */
+    position: absolute; /* Posisi teks overlay */
+    top: 50%; /* Menempatkan di tengah vertikal */
+    left: 50%; /* Menempatkan di tengah horizontal */
+    transform: translate(-50%, -50%); /* Menggeser teks ke tengah */
+    text-align: center; /* Menyelaraskan teks di tengah */
+}
